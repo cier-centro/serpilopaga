@@ -9,12 +9,23 @@
 $( document ).ready(function() {
 	var ww= $(window).width();
 	var fw=ww*10/192;
+	var intfw=parseInt(fw);
+	//console.log("-moz-transform","scale(0."+intfw+",0."+intfw+")");
 	$("html").css("zoom",fw+"%");
+	$("html").css("-moz-transform","scale(0."+intfw+",0."+intfw+")");
+	$("html").css("-moz-transform-origin","left top");
+	$("html").css("-ms-zoom","0."+intfw+");
+	$("html").css("-webkit-zoom","0."+intfw+");
 });
 $( window ).resize(function() {
  	var ww= $(window).width();
 	var fw=ww*10/192;
+	var intfw=parseInt(fw);
 	$("html").css("zoom",fw+"%");
+	$("html").css("-moz-transform","scale(0."+intfw+",0."+intfw+")");
+	$("html").css("-moz-transform-origin","left top");
+	$("html").css("-ms-zoom","0."+intfw+");
+	$("html").css("-webkit-zoom","0."+intfw+");
 });
 </script>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
